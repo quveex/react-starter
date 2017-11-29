@@ -1,0 +1,38 @@
+{
+  "presets": [
+    ["env", { "modules": false }],
+    "react",
+    "stage-0"
+  ],
+  "plugins": [
+
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "development": {
+      "plugins": [
+        "react-hot-loader/babel",
+        ["react-css-modules", {
+          "generateScopedName": "[local]__[hash:base64:5]"
+        }]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["react-css-modules", {
+          "generateScopedName": "[local]__[hash:base64:5]"
+        }]
+      ]
+    },
+    "test": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        ["react-css-modules", {
+          "generateScopedName": "[local]"
+        }]
+      ]
+    }
+  }
+}

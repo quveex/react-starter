@@ -1,0 +1,14 @@
+{
+  "moduleFileExtensions": ["js", "jsx"],
+  "transform": {
+    "^.+\\.(js|jsx)$": "babel-jest",
+    "^.+\\.css$": "identity-obj-proxy"
+  },
+  "moduleNameMapper": {
+      "^.+\\.css$": "identity-obj-proxy"
+    },
+  "testMatch": [
+    "<rootDir>/src/**/?(*.)test.js"
+  ],
+  "setupFiles": ["<rootDir>/config/setupTests.js"]
+}
